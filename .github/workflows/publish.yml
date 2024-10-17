@@ -1,7 +1,4 @@
-# .github/workflows/publish.yml
-
 name: Publish
-
 on:
   push:
     branches:
@@ -10,17 +7,13 @@ on:
 jobs:
   publish:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
-      id-token: write # The OIDC ID token is used for authentication with JSR.
+      id-token: write
+
     steps:
-      - name: Setup Repo
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
-      - name: Setup Deno
-        uses: denoland/setup-deno@v2.0.0
-        
-      - name: Run Publish
+      - name: Publish package
         run: deno publish
-
-      
