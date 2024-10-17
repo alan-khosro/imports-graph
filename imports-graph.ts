@@ -2,8 +2,8 @@
 // If git presents, respect git (git ls-files)
 // deno --allow-run=git --alow-read imports-graph.ts
 
-import { walk } from "https://deno.land/std/fs/mod.ts";
-import * as path from "https://deno.land/std/path/mod.ts";
+import { walk } from "jsr:@std/fs@1.0.4";
+import * as path from "jsr:@std/path@1.0.6";
 
 async function findTsJsFiles(dir: string): Promise<string[]> {
 	const gitTrackedFiles = await getGitTrackedFiles(dir);
