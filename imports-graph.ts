@@ -145,7 +145,7 @@ export async function toDot(rootDir: string = ".") {
 					? `[label="${escapeDoubleQuotes(importItems)}"]`
 					: "";
 
-				edges.push(`  "${sourceNode}" -> "${targetNode}" ${label};`);
+				edges.push(`  "${targetNode}" -> "${sourceNode}" ${label};`);
 			}
 		}
 
