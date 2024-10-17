@@ -1,0 +1,5 @@
+{
+  "name": "@invisement/imports-graph",
+  "version": "0.1.0",
+  "exports": "./imports-graph.ts"
+}

@@ -88,8 +88,7 @@ function createSubgraphName(dirPath: string): string {
 	return `cluster_${dirPath.replace(/[^\w]/g, "_")}`;
 }
 
-async function main() {
-	const rootDir = Deno.args[0] || ".";
+export async function toDot(rootDir: string = ".") {
 	const files = await findTsJsFiles(rootDir);
 
 	console.log("strict digraph TypeScriptImports {");
@@ -159,5 +158,6 @@ async function main() {
 }
 
 if (import.meta.main) {
-	main();
+	const rootDir = Deno.args[0] || ".";
+	toDot(rootDir);
 }
