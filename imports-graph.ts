@@ -88,6 +88,7 @@ function createSubgraphName(dirPath: string): string {
 	return `cluster_${dirPath.replace(/[^\w]/g, "_")}`;
 }
 
+/** for given directory (or current directory), creates import dependency graph in DOT notation and dumps to stdio */
 export async function toDot(rootDir: string = ".") {
 	const files = await findTsJsFiles(rootDir);
 
