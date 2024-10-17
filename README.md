@@ -6,21 +6,21 @@ Draw dependency graph for typescript or javascript modules
 
 Download the file (imports-graph.ts) or git clone the repo or imports from JSR
 or just use the direct url from JSR:
-https://jsr.io/@invisement/imports-graph/0.1.4/imports-graph.ts
+https://jsr.io/@invisement/imports-graph/0.1.5/imports-graph.ts
 
 ## Usage
 
 ### Output dot notation to stdio/terminal
 
 ```sh
-deno run --allow-read --allow-run=git https://jsr.io/@invisement/imports-graph/0.1.4/imports-graph.ts ./ui/src
+deno run --allow-read --allow-run=git https://jsr.io/@invisement/imports-graph/0.1.5/imports-graph.ts ./ui/src
 ```
 
 or you can pipe it to clipboard and paste it in an online
 [graph viewer](https://magjac.com/graphviz-visual-editor/)
 
 ```sh
-deno run -A https://jsr.io/@invisement/imports-graph/0.1.4/imports-graph.ts ./ui/src | pbcopy
+deno run -A https://jsr.io/@invisement/imports-graph/0.1.5/imports-graph.ts ./ui/src | pbcopy
 ```
 
 ### Generate .svg file
@@ -28,7 +28,7 @@ deno run -A https://jsr.io/@invisement/imports-graph/0.1.4/imports-graph.ts ./ui
 - install dot graphviz: https://graphviz.org/doc/info/command.html.
 
 ```sh
-deno run -A https://jsr.io/@invisement/imports-graph/0.1.4/imports-graph.ts ./ui/src | dot -Tsvg > ./documentation/ui-imports-graph.svg
+deno run -A https://jsr.io/@invisement/imports-graph/0.1.5/imports-graph.ts ./ui/src | dot -Tsvg > ./documentation/ui-imports-graph.svg
 ```
 
 ### Import
